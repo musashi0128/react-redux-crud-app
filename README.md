@@ -1,2 +1,1 @@
-# react-redux-crud-app
-react-redux
+reac-redux
