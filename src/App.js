@@ -1,18 +1,30 @@
-import React from 'react';
 // import React, {Component} from 'react';
-
-function App() {
-  return (
-    <div className="App">
-      Hello World!
-    </div>
-  );
-}
+import React from 'react';
 
 // class App extends Component {
-//     render() {
-//       return <div>Hello, world!</div>
-//     }
+//   render() {
+//     return (
+//       <React.Fragment>
+//         <label htmlFor="bar">bar</label>
+//         <input type="text" onChange={() => {console.log("change")}} />
+//       </React.Fragment>
+//     )
+//   }
 // }
+
+const App = () =>  {
+  return (
+    <div>
+      <Cat />
+      <Cat />
+      <Cat />
+      <Cat />
+    </div>
+  )
+}
+
+const Cat = () => {
+  return <div>Meow!</div>
+}
 
 export default App;
