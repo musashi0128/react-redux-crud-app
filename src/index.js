@@ -1,20 +1,20 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import { createStroe } from 'redux'
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { createStore } from 'redux'
 import { Provider } from 'react-redux'
 
 import './index.css';
 import reducer from './reducers'
-import App from './components/App'
-import registerSeviceWorker from './registerSeviceWorker'
+import App from './components/App';
+import * as serviceWorker from './serviceWorker';
 
-const store = createStroe(reducer)
+const store = createStore(reducer)
 
 ReactDOM.render(
   <Provider store={store}>
     <App />
   </Provider>,
   document.getElementById('root')
-)
-
-registerSeviceWorker()
+);
+//registerServiceWorker();
+serviceWorker.unregister();
